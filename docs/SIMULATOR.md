@@ -2,59 +2,60 @@
 
 ## Purpose
 
-Local browser-based engineering simulator for the end-to-end BioSense signal chain.
+Browser-based engineering simulator for the BioSense signal chain.
 
-It is explicitly **not a medical model**.
+It is explicitly **not a medical model** and all current sensor sensitivities remain provisional until replaced by bench calibration.
 
-## Current blocks
+## Current modeled blocks
 
 - GlucoseSensorModel
 - OxygenSensorModel
 - TemperatureModel
-- independent glucose and O2 TIAs
-- independent low-pass state
+- independent glucose/O2 TIAs
+- independent low-pass states
 - ADC CH1 glucose
 - ADC CH2 oxygen
-- ADC CH3 temperature placeholder
+- ADC CH3 temperature
 - BioSenseAlgorithm
 - signal-quality checks
 - engineering charts
-- calibration sweep
-- four built-in experiments
-- CSV export
+- scenario engine
+- calibration/sweep controls
+- complete session capture
+- STOP & ANALYZE
+- raw CSV export
+- summary CSV export
+- JSON export
+- standalone HTML report / PDF workflow
+- transient/tracking metrics
+- custom RF/CF input with units
 
 ## Reference baseline
 
-- Glucose: 200 mg/dL
+- glucose: 200 mg/dL
 - O2: 50 sim
-- Temperature: 37 °C
+- temperature: 37 °C
 - glucose sensitivity: 1 nA/(mg/dL), provisional
+- O2 sensitivity: 1 nA/sim-unit, provisional
 - RF glucose: 1 MΩ
 - RF oxygen: 1 MΩ
-- CF glucose: 100 nF
-- CF oxygen: 100 nF
 - VREF: 1.65 V
 - ADC: 12 bit / 3.3 V
-- noise: 0
-- drift: 0
-- temperature coefficient: 0
-- O2 influence coefficient: 0 / disabled
+- zero noise/drift reference
 
-Expected:
+Expected ideal values:
 - glucose current 200 nA
 - glucose TIA 1.850 V
 - glucose ADC 2296
-- estimated glucose ~200.256 mg/dL
+- estimated glucose ~200.26 mg/dL
 - O2 current 50 nA
 - O2 TIA 1.700 V
 - O2 ADC 2110
 - recovered O2 ~50.37 sim
 
-## Session export upgrade
+## Session model
 
-Required after each simulation run.
-
-### Session model
+A session stores the complete run independently from the short rolling chart buffer.
 
 ```js
 SimulationSession = {
@@ -68,59 +69,151 @@ SimulationSession = {
 }
 ```
 
-The complete session sample log must be separate from the short rolling chart buffer.
+On STOP:
+- freeze the run
+- retain all samples
+- calculate full-session metrics
+- calculate transient/tracking metrics
+- display results
+- enable exports
 
-### STOP & ANALYZE
+PAUSE preserves the session.
 
-On stop:
-- freeze the session
-- retain every sample
-- compute full-session metrics
-- display Simulation Results
-- enable export actions
+## Export status
 
-PAUSE must not clear the session.
-RESET should warn if unexported results exist.
+Implemented workflow includes:
+- RAW CSV
+- SUMMARY CSV
+- JSON
+- standalone HTML report
+- report/PDF flow
+- EXPORT ALL
 
-### Exports
+A previous report bug where null metrics rendered as garbage/control characters was corrected:
+- display layer renders unavailable numeric values as `N/A`
+- JSON keeps proper `null`
+- no NaN/Infinity should be serialized
 
-- RAW CSV — one row per sample
-- SUMMARY CSV — configuration and metrics
-- JSON — metadata + configuration + metrics + all samples
-- standalone HTML report — metrics, warnings and charts if possible
-- EXPORT ALL — generate all supported outputs
+## Metrics
 
-### Required metrics
+### Glucose
 
-Glucose:
 - mean actual
 - mean estimated
-- mean error
+- signed mean error
 - MAE
 - RMSE
 - maximum absolute error
 - min/max/std
-- mean raw/recovered current
+- mean current
 - mean TIA/filter voltage
 - ADC min/max/mean
-- quantization error
 - saturation/clipping counts
+- step/transient metrics
+- moving/tracking sample counts
+- tracking MAE/RMSE/max
+- best lag
+- lag-corrected RMSE
 
-Oxygen:
+### Oxygen
+
 - mean input/recovered
-- current and TIA/filter means
-- ADC min/max/mean
-- saturation/clipping counts
+- current
+- TIA/filter values
+- ADC values
+- saturation/clipping
 
-Temperature:
+### Temperature
+
 - mean/min/max
 
-### Validation
+## RF / CF configurability
 
-A 120 s run with dt=0.1 s should contain approximately 1201 samples depending on inclusive-endpoint implementation.
+The simulator supports preset and custom values with explicit units.
 
-Raw CSV and JSON sample counts must match the stored session.
+Current glucose engineering reference:
+- RF = 1 MΩ
+- provisional CF candidate = 470 nF
+- RC ≈ 0.47 s
+- fc ≈ 0.3386 Hz
 
-JSON must never contain NaN or Infinity.
+This is not yet a deterministic optimum.
 
-The validated ideal baseline must remain unchanged after session/export code is added.
+## Reproducibility gap
+
+Historic noise/CF runs used random noise with different durations. They validate trends but should not be used to rank closely spaced CF values definitively.
+
+Required change:
+- deterministic seeded PRNG
+- same config + same seed → identical output
+- no provided seed → generate one and return it
+- within a sweep, every candidate value must use the **same underlying noise realization**
+
+## Planned API contract
+
+The API must call the **same shared simulation engine** as the browser UI. Do not duplicate the simulation math.
+
+Planned endpoints:
+
+```text
+GET  /api/v1/health
+GET  /api/v1/info
+GET  /api/v1/defaults
+GET  /api/v1/scenarios
+POST /api/v1/simulate
+POST /api/v1/sweep
+POST /api/v1/compare
+
+GET  /openapi.json
+API docs / Swagger
+```
+
+### API requirements
+
+- Bearer authentication using `BIOSENSE_API_KEY`
+- health and OpenAPI may remain public
+- CORS configuration
+- rate limiting
+- structured JSON errors
+- request-size / simulation limits
+- deterministic `random_seed`
+- explicit drift unit: `drift_na_per_min`
+- `include_samples` default:
+  - simulate: true
+  - sweep: false
+  - compare: false
+- safe sweep-parameter allowlist
+- no database required for v1
+- Docker/Coolify deployment
+- `.env.example`
+- automated tests
+- OpenAPI 3.x
+- no change to existing UI formulas/defaults/null semantics
+
+### Controlled sweep acceptance test
+
+Recommended first deterministic sweep:
+- scenario: Meal
+- glucose noise: 10 nA
+- drift: 0 nA/min
+- RF: 1 MΩ
+- CF values: 100, 220, 330, 390, 470, 560, 680, 820, 1000 nF
+- one fixed seed for all candidates
+
+Outputs to compare:
+- global MAE/RMSE/max
+- tracking MAE/RMSE/max
+- best lag
+- lag-corrected RMSE
+- saturation/clipping
+- signal quality
+
+## Future drift sweep
+
+After deterministic CF selection, hold CF fixed and evaluate explicit glucose drift values such as:
+
+```text
+0, 0.5, 1, 2, 5, 10 nA/min
+```
+
+The exact sweep should be run through the shared engine/API once seed reproducibility is available.

@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0c1116"/>
+  <text x="80" y="220" fill="#e7eef6" font-family="system-ui, sans-serif" font-size="72" font-weight="700">BioSense</text>
+  <text x="80" y="300" fill="#8ea0b4" font-family="system-ui, sans-serif" font-size="32">Bench simulator · DNET</text>
+  <text x="80" y="420" fill="#3cbfb4" font-family="ui-monospace, monospace" font-size="24">Sensor ’ TIA ’ Filter ’ ADC ’ Algorithm</text>
+  <text x="80" y="540" fill="#e36d6d" font-family="system-ui, sans-serif" font-size="20">SIMULATED · NOT FOR MEDICAL USE</text>
+</svg>

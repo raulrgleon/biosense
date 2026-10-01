@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>BioSense — Simulador de banco</title>
+  <meta name="description" content="Simulador de ingeniería para los canales de glucosa, oxígeno y temperatura de BioSense / BioDot. Solo simulación. No es uso médico. Un proyecto DNET.">
+  <link rel="canonical" href="https://biosense.dev/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://biosense.dev/">
+  <meta property="og:title" content="BioSense — Simulador de banco">
+  <meta property="og:description" content="Sensor → TIA → filtro → ADC → algoritmo. REST, MCP y OAuth. Solo simulación.">
+  <meta property="og:image" content="https://biosense.dev/og-image.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "BioSense Simulator",
+    "url": "https://biosense.dev",
+    "applicationCategory": "DeveloperApplication",
+    "operatingSystem": "Web",
+    "description": "Bench simulator for BioSense / BioDot glucose, oxygen, and temperature channels.",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "publisher": { "@type": "Organization", "name": "DNET", "url": "https://dnet.llc" }
+  }
+  </script>
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="/">
+      <span class="mark" aria-hidden="true"></span>
+      <span class="brand-text">BIOSENSE</span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#canales">Canales</a>
+      <a href="#superficies">Superficies</a>
+      <a href="https://tuhoy.com">Simulador</a>
+      <a href="https://dnet.llc">DNET</a>
+    </nav>
+    <a class="btn" href="https://tuhoy.com">Abrir simulador</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <p class="eyebrow">
+        <span class="pill">SIMULATION ONLY</span>
+        <span class="pill warn">NOT FOR MEDICAL USE</span>
+        <span class="pill">DNET</span>
+      </p>
+      <h1>Banco de pruebas para BioSense / BioDot.</h1>
+      <p class="lead">
+        Tres canales independientes: glucosa, oxígeno y temperatura.
+        El mismo motor sirve la UI, la API REST y el MCP remoto.
+        Nada de esto es un dispositivo médico ni una medición de tejido.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="https://tuhoy.com">Abrir simulador en vivo</a>
+        <a class="btn btn-ghost" href="https://tuhoy.com/api/docs">Documentación API</a>
+      </div>
+      <p class="chain" aria-label="Cadena de simulación">
+        Sensor <span>→</span> TIA <span>→</span> Filtro <span>→</span> ADC <span>→</span> Algoritmo
+      </p>
+    </section>
+
+    <section id="canales" class="grid3">
+      <article>
+        <h2>Glucosa</h2>
+        <p>Canal electroquímico CH1. Corriente de sensor, TIA, filtro y ADC. La sensibilidad por defecto es provisional.</p>
+      </article>
+      <article>
+        <h2>Oxígeno</h2>
+        <p>Segundo canal electroquímico, CH2, con su propio TIA y filtro. Las unidades son de simulación, no mmHg.</p>
+      </article>
+      <article>
+        <h2>Temperatura</h2>
+        <p>Tercer canal. Hoy entra por control. El ADC CH3 queda reservado para un sensor físico posterior.</p>
+      </article>
+    </section>
+
+    <section id="superficies" class="surfaces">
+      <h2>Tres superficies, un motor</h2>
+      <ul>
+        <li>
+          <strong>UI</strong>
+          <span><a href="https://tuhoy.com">tuhoy.com</a> — sesión, gráficas, barridos y exportación.</span>
+        </li>
+        <li>
+          <strong>REST</strong>
+          <span><a href="https://tuhoy.com/api/v1/health">/api/v1</a> y <a href="https://tuhoy.com/api/docs">Swagger</a>. Misma validación que la UI.</span>
+        </li>
+        <li>
+          <strong>MCP</strong>
+          <span><a href="https://tuhoy.com/mcp">tuhoy.com/mcp</a> — Streamable HTTP, API key u OAuth 2.1.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="note">
+      <h2>Lo que no es</h2>
+      <p>
+        No es un glucómetro. No sustituye laboratorio. Los coeficientes marcados
+        PROVISIONAL no son curvas de electrodo reales. El audience OAuth del MCP
+        sigue en <code>https://tuhoy.com/mcp</code>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p><a href="https://biosense.dev">biosense.dev</a> · producto de <a href="https://dnet.llc">DNET</a></p>
+    <p>Simulador en <a href="https://tuhoy.com">tuhoy.com</a> · ficha en <a href="https://dnet.llc/proyectos/biosense/">dnet.llc/proyectos/biosense</a></p>
+    <p class="copy">© <span id="year"></span> DNET. SIMULATED · NOT FOR MEDICAL USE.</p>
+  </footer>
+  <script src="/script.js"></script>
+</body>
+</html>

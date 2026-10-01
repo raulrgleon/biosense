@@ -8,22 +8,11 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center gap-1 text-[12px] uppercase tracking-[0.14em] text-muted">
-      <Link
-        href={pathname}
-        locale="en"
-        className={locale === "en" ? "text-paper" : "hover:text-paper"}
-        aria-current={locale === "en" ? "page" : undefined}
-      >
+    <div className="lang-pill text-[11px] uppercase tracking-[0.16em] text-muted">
+      <Link href={pathname} locale="en" aria-current={locale === "en" ? "page" : undefined}>
         EN
       </Link>
-      <span aria-hidden="true">/</span>
-      <Link
-        href={pathname}
-        locale="es"
-        className={locale === "es" ? "text-paper" : "hover:text-paper"}
-        aria-current={locale === "es" ? "page" : undefined}
-      >
+      <Link href={pathname} locale="es" aria-current={locale === "es" ? "page" : undefined}>
         ES
       </Link>
     </div>

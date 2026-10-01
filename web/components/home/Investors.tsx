@@ -9,8 +9,8 @@ export function Investors() {
   return (
     <Section>
       <Reveal className="max-w-2xl">
-        <h2 className="text-4xl font-medium tracking-[-0.04em] sm:text-5xl">{t("title")}</h2>
-        <p className="mt-6 text-lg leading-relaxed text-muted">{t("body")}</p>
+        <h2 className="text-[clamp(2.4rem,5vw,3.6rem)] font-medium tracking-[-0.05em]">{t("title")}</h2>
+        <p className="mt-6 max-w-[38rem] text-lg leading-relaxed text-muted">{t("body")}</p>
         <Link href="mailto:hello@biosense.dev" className="mt-8 inline-flex text-accent">
           {t("cta")}
         </Link>

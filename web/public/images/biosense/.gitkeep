@@ -1,6 +1,9 @@
-# Place final product renders here:
-# implant-hero.webp
-# implant-exploded.webp
-# bioband.webp
-# ecosystem.webp
-# app-dashboard.webp
+# Product image slots — drop real files here to replace CSS/SVG placeholders:
+#   biosense-hero.webp
+#   biosense-implant.webp
+#   biosense-exploded.webp
+#   biosense-bioband.webp
+#   biosense-under-skin.webp
+#   biosense-ecosystem.webp
+#   biosense-app.webp
+#   lifestyle.webp

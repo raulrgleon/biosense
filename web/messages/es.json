@@ -20,12 +20,15 @@
     "close": "Cerrar menú"
   },
   "hero": {
+    "kicker": "BioSense",
     "badge": "Actualmente en I+D",
     "line1": "Entiende tu cuerpo.",
     "line2": "Más allá de la superficie.",
-    "body": "BioSense desarrolla una nueva generación de tecnología biosensora multiparámetro para explorar cómo podría ser una visión más continua de lo que ocurre dentro del cuerpo.",
+    "body": "Biosensado multiparámetro, en desarrollo para explorar una visión más continua de la biología humana.",
     "primary": "Descubre BioSense",
+    "seeSystem": "Ver cómo funciona",
     "secondary": "Sigue el desarrollo",
+    "scroll": "Desplazar",
     "disclaimer": "BioSense es una plataforma tecnológica experimental en desarrollo. Actualmente no es un dispositivo médico ni está destinada al diagnóstico o tratamiento.",
     "concept": "Concepto de ingeniería"
   },
@@ -50,7 +53,22 @@
       "body": "Se desarrolla un canal dedicado de temperatura para observar cambios térmicos locales y apoyar futuras interpretaciones multiparámetro."
     },
     "underDevelopment": "En desarrollo",
-    "notSpo2": "Experimental — no es SpO₂."
+    "notSpo2": "Experimental — no es SpO₂.",
+    "viz": "Visualización conceptual"
+  },
+  "reveal": {
+    "line1": "Pequeño por fuera.",
+    "line2": "Complejo por dentro.",
+    "concept": "Visualización conceptual",
+    "shell": "Carcasa exterior",
+    "coil": "Bobina inductiva",
+    "sensors": "Área de medición",
+    "electronics": "Electrónica / AFE",
+    "glucose": "Glucosa",
+    "oxygen": "Oxígeno",
+    "temperature": "Temperatura",
+    "band": "BioBand",
+    "field": "Energía y datos inalámbricos"
   },
   "ecosystem": {
     "title1": "Un pequeño sensor.",
@@ -82,7 +100,9 @@
     "sensorTitle": "Sensor BioSense",
     "sensorItems": "Electrónica · AFE electroquímico · MCU · Bobina pequeña",
     "sensorNone": "Sin batería recargable · Sin BLE",
-    "note": "Arquitectura conceptual. La implementación final puede evolucionar durante el desarrollo."
+    "note": "Arquitectura conceptual. La implementación final puede evolucionar durante el desarrollo.",
+    "power": "Energía",
+    "data": "Datos"
   },
   "continuity": {
     "title": "La salud no es una fotografía.",
@@ -145,9 +165,9 @@
     "s07": { "title": "Biocompatibilidad / vía preclínica", "stage": "Etapa 07" },
     "s08": { "title": "Vía clínica / regulatoria", "stage": "Etapa 08" },
     "status": {
-      "activeValidated": "Activo / línea base validada",
+      "activeValidated": "Validado",
       "active": "Activo",
-      "development": "En desarrollo",
+      "development": "Activo",
       "planned": "Planificado",
       "future": "Futuro"
     }
@@ -175,6 +195,15 @@
     "target": "Objetivo temprano de ingeniería",
     "dims": "15–25 mm de largo · 4–7 mm de ancho · 2–4 mm de espesor",
     "change": "Las dimensiones son conceptuales y pueden cambiar de forma sustancial."
+  },
+  "underskin": {
+    "title": "Diseñado para permanecer en silencio bajo la superficie.",
+    "body": "Una vista conceptual de cómo un pequeño módulo sensor podría situarse bajo la piel, alineado con BioBand.",
+    "label": "Visualización conceptual"
+  },
+  "lifestyle": {
+    "line1": "La tecnología debe integrarse en la vida.",
+    "line2": "No apoderarse de ella."
   },
   "responsible": {
     "title": "Desarrollar con responsabilidad importa.",

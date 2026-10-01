@@ -20,12 +20,15 @@
     "close": "Close menu"
   },
   "hero": {
+    "kicker": "BioSense",
     "badge": "Currently in R&D",
     "line1": "Understand your body.",
     "line2": "Beyond the surface.",
-    "body": "BioSense is developing a new generation of multi-parameter biosensing technology designed to explore what continuous biological insight could look like.",
+    "body": "Multi-parameter biosensing, being developed to explore a more continuous view of human biology.",
     "primary": "Explore BioSense",
+    "seeSystem": "See how it works",
     "secondary": "Follow Development",
+    "scroll": "Scroll",
     "disclaimer": "BioSense is an experimental technology platform in development. It is not currently a medical device and is not intended for diagnosis or treatment.",
     "concept": "Engineering concept"
   },
@@ -50,7 +53,22 @@
       "body": "A dedicated temperature channel is being developed to observe local thermal changes and support future multi-signal interpretation."
     },
     "underDevelopment": "Under development",
-    "notSpo2": "Experimental — not SpO₂."
+    "notSpo2": "Experimental — not SpO₂.",
+    "viz": "Concept visualization"
+  },
+  "reveal": {
+    "line1": "Small outside.",
+    "line2": "Complex inside.",
+    "concept": "Concept visualization",
+    "shell": "Outer shell",
+    "coil": "Inductive coil",
+    "sensors": "Sensing area",
+    "electronics": "Electronics / AFE",
+    "glucose": "Glucose",
+    "oxygen": "Oxygen",
+    "temperature": "Temperature",
+    "band": "BioBand",
+    "field": "Wireless power and data"
   },
   "ecosystem": {
     "title1": "One small sensor.",
@@ -82,7 +100,9 @@
     "sensorTitle": "BioSense sensor",
     "sensorItems": "Sensor electronics · Electrochemical AFE · MCU · Small coil",
     "sensorNone": "No rechargeable battery · No BLE",
-    "note": "Concept architecture. Final implementation may evolve during engineering development."
+    "note": "Concept architecture. Final implementation may evolve during engineering development.",
+    "power": "Power",
+    "data": "Data"
   },
   "continuity": {
     "title": "Health is not a snapshot.",
@@ -145,9 +165,9 @@
     "s07": { "title": "Biocompatibility / preclinical pathway", "stage": "Stage 07" },
     "s08": { "title": "Clinical / regulatory pathway", "stage": "Stage 08" },
     "status": {
-      "activeValidated": "Active / validated baseline",
+      "activeValidated": "Validated",
       "active": "Active",
-      "development": "Development",
+      "development": "Active",
       "planned": "Planned",
       "future": "Future"
     }
@@ -175,6 +195,15 @@
     "target": "Early engineering target",
     "dims": "15–25 mm length · 4–7 mm width · 2–4 mm thickness",
     "change": "Dimensions are conceptual and may change substantially."
+  },
+  "underskin": {
+    "title": "Designed to sit quietly under the surface.",
+    "body": "A conceptual view of how a small sensing module could sit beneath the skin, aligned with BioBand above.",
+    "label": "Concept visualization"
+  },
+  "lifestyle": {
+    "line1": "Technology should fit into life.",
+    "line2": "Not take it over."
   },
   "responsible": {
     "title": "Building carefully matters.",

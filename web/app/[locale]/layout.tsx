@@ -65,7 +65,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   return (
     <html lang={locale} className={`${geist.variable} h-full antialiased`}>
-      <body className="min-h-full bg-bg text-paper">
+      <body className="min-h-full bg-bg text-ink">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

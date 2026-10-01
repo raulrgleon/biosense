@@ -1,0 +1,258 @@
+{
+  "meta": {
+    "title": "BioSense — El futuro de la medición de salud centrada en las personas",
+    "description": "BioSense desarrolla una plataforma de medición de nueva generación, pensada para ayudar a las personas a entender señales clave del cuerpo de forma más continua e inteligente. En desarrollo. No es un dispositivo médico.",
+    "ogTitle": "BioSense — Medición de salud centrada en las personas",
+    "ogDescription": "Una plataforma de medición en desarrollo. La continuidad es una visión, no una afirmación clínica.",
+    "privacyTitle": "Privacidad — BioSense",
+    "termsTitle": "Términos — BioSense"
+  },
+  "nav": {
+    "home": "Inicio",
+    "technology": "Tecnología",
+    "benefits": "Beneficios",
+    "development": "Desarrollo",
+    "faq": "Preguntas",
+    "contact": "Contacto",
+    "cta": "Únete al acceso anticipado",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "hero": {
+    "kicker": "En desarrollo",
+    "headline": "Otra forma de entender el cuerpo.",
+    "subheadline": "Visión continua. Salud centrada en las personas.",
+    "body": "BioSense construye una plataforma de medición de nueva generación, pensada para ayudar a las personas a entender señales clave del cuerpo de forma más continua e inteligente.",
+    "primary": "Únete al acceso anticipado",
+    "secondary": "Ver la visión",
+    "visualLabel": "Visual de concepto",
+    "visualCaption": "Sensor · interfaz vestible · capa de lectura",
+    "disclaimer": "BioSense está en desarrollo y no es un dispositivo médico. No sirve para diagnóstico ni uso clínico."
+  },
+  "why": {
+    "eyebrow": "Por qué BioSense",
+    "title": "Las personas merecen una lectura más clara de su propio cuerpo.",
+    "lead": "Hoy los datos de salud suelen llegar fragmentados, tarde o sin contexto. Nuestra visión es un cuadro más sereno y continuo — para la vida diaria, no para una sala de espera.",
+    "items": {
+      "awareness": {
+        "title": "Claridad, no conjetura",
+        "body": "El objetivo es sencillo: ayudar a notar patrones que se puedan usar — con claridad, no con ruido."
+      },
+      "prevention": {
+        "title": "Una mirada preventiva",
+        "body": "Trabajamos hacia una lectura más temprana y quieta — la que puede sostener mejores hábitos antes de que una crisis pida atención."
+      },
+      "agency": {
+        "title": "Agencia, no ansiedad",
+        "body": "La plataforma se diseña para dar más confianza en las decisiones de cada día, sin convertir el cuerpo en un tablero de miedo."
+      }
+    }
+  },
+  "benefits": {
+    "eyebrow": "Valor",
+    "title": "Hacia dónde diseñamos.",
+    "lead": "Son propósitos a futuro. Describen intención, no resultados garantizados.",
+    "cards": {
+      "insight": {
+        "title": "Lectura continua",
+        "body": "Pensada para seguir señales clave en el tiempo, no solo en una foto aislada."
+      },
+      "awareness": {
+        "title": "Más conciencia del cuerpo",
+        "body": "Se construye para apoyar una lectura más personal de cómo el cuerpo responde al descanso, al esfuerzo y al día a día."
+      },
+      "multi": {
+        "title": "Varias señales a la vez",
+        "body": "El concepto actual reúne glucosa, oxígeno tisular y temperatura en una sola plataforma de desarrollo."
+      },
+      "personal": {
+        "title": "Interpretación personal",
+        "body": "Aspira a dar contexto a las señales — para que un número se vuelva algo que una persona pueda entender."
+      },
+      "ecosystem": {
+        "title": "Un ecosistema quieto",
+        "body": "Se desarrolla como sensor, interfaz vestible y aplicación que puedan hablar entre sí."
+      },
+      "everyday": {
+        "title": "Hecha para la vida diaria",
+        "body": "La meta lejana es un sistema lo bastante silencioso como para convivir con él — no un aparato que pida ser exhibido."
+      }
+    }
+  },
+  "technology": {
+    "eyebrow": "Tecnología",
+    "title": "Un esfuerzo de ingeniería, todavía en curso.",
+    "lead": "El concepto actual es un biosensor subcutáneo pequeño, una interfaz vestible externa y una aplicación. Es una plataforma de investigación y desarrollo — no un producto terminado.",
+    "points": {
+      "sensor": {
+        "title": "Concepto de sensor subcutáneo",
+        "body": "Un módulo compacto que se explora para leer varias señales cerca del cuerpo."
+      },
+      "wearable": {
+        "title": "Interfaz vestible externa",
+        "body": "Un lector tipo banda, pensado para alimentar, recibir y llevar la señal hacia afuera."
+      },
+      "app": {
+        "title": "Conexión con la app",
+        "body": "Una capa de software en desarrollo para convertir la señal en una imagen legible."
+      },
+      "layer": {
+        "title": "Capa de interpretación",
+        "body": "El objetivo a largo plazo es contexto inteligente — no un torrente de números sin explicación."
+      }
+    },
+    "measuresTitle": "Parámetros del concepto actual",
+    "measuresNote": "Son metas de desarrollo, no afirmaciones comerciales.",
+    "glucose": "Glucosa",
+    "oxygen": "Oxígeno tisular",
+    "temperature": "Temperatura",
+    "flowTitle": "Cómo se piensa el recorrido",
+    "flow": {
+      "sensor": "Sensor",
+      "wearable": "Interfaz vestible",
+      "app": "App",
+      "insight": "Lectura"
+    }
+  },
+  "development": {
+    "eyebrow": "Dónde estamos hoy",
+    "title": "Primero, ingeniería.",
+    "badge": "Prototipo / etapa de I+D",
+    "body": "BioSense está en desarrollo activo. El trabajo actual incluye simulación, arquitectura, prototipos y la disciplina temprana de la validación. Cualquier afirmación de producto dependerá de pruebas futuras y de los caminos regulatorios. No vamos a inventar una certeza que no hayamos ganado.",
+    "items": {
+      "simulation": {
+        "title": "Simulación",
+        "body": "Un modelo de ingeniería compartido para estresar la cadena de señal antes de tener curvas de laboratorio."
+      },
+      "architecture": {
+        "title": "Arquitectura",
+        "body": "Sensor, interfaz vestible y software pensados como un solo sistema — no como tres demos sueltas."
+      },
+      "validation": {
+        "title": "Validación por delante",
+        "body": "Cualquier camino de producto exige medición, trabajo de seguridad y revisión formal. Ese trabajo no está hecho."
+      }
+    },
+    "disclaimer": "BioSense aún no es un dispositivo médico comercial y no está pensado para diagnóstico, tratamiento ni uso clínico."
+  },
+  "impact": {
+    "eyebrow": "Impacto humano",
+    "title": "Más agencia sobre el cuerpo que ya habitas.",
+    "body": "La misión no es convertir a las personas en pacientes. Es hacer que una medición avanzada sea más comprensible, más personal y — con el tiempo — más accesible. Las mejores decisiones empiezan por un saber más quieto.",
+    "quotes": {
+      "one": "Entender el cuerpo.",
+      "two": "Sostener mejores decisiones diarias.",
+      "three": "Mantener la ciencia honesta."
+    }
+  },
+  "showcase": {
+    "eyebrow": "Concepto",
+    "title": "El sistema, como lo imaginamos.",
+    "lead": "Estas imágenes son conceptos. Describen dirección, no un producto en venta.",
+    "items": {
+      "sensor": {
+        "label": "Concepto",
+        "title": "Módulo de medición",
+        "body": "Un biosensor subcutáneo compacto para leer varias señales."
+      },
+      "band": {
+        "label": "Concepto",
+        "title": "Interfaz vestible",
+        "body": "Una banda externa pensada para acoplarse al sensor y sacar la señal."
+      },
+      "app": {
+        "label": "Concepto",
+        "title": "Aplicación de lectura",
+        "body": "Una interfaz serena, en diseño, para convertir señales en algo usable."
+      }
+    }
+  },
+  "partners": {
+    "eyebrow": "Inversores y socios",
+    "title": "Construir con nosotros, con cuidado.",
+    "body": "Abrimos conversaciones serias con investigadores, colaboradores técnicos y socios que entiendan que este es un camino largo de ingeniería — no un relato de semana de lanzamiento.",
+    "cta": "Pedir una conversación"
+  },
+  "waitlist": {
+    "eyebrow": "Acceso anticipado",
+    "title": "Quédate cerca del trabajo.",
+    "lead": "Deja un nombre y un correo. Escribiremos cuando haya algo real que contar — no una cadena de avisos vacíos.",
+    "name": "Nombre",
+    "email": "Correo",
+    "role": "Me interesa como",
+    "roles": {
+      "consumer": "Persona / early adopter",
+      "investor": "Inversor",
+      "researcher": "Investigador",
+      "partner": "Socio",
+      "collaborator": "Colaborador"
+    },
+    "submit": "Únete al acceso anticipado",
+    "submitting": "Enviando…",
+    "successTitle": "Ya estás en la lista.",
+    "successBody": "Gracias. Te escribiremos cuando haya una novedad verdadera.",
+    "error": "Algo falló. Inténtalo de nuevo.",
+    "invalid": "Añade un nombre y un correo válidos."
+  },
+  "faq": {
+    "eyebrow": "Preguntas",
+    "title": "Respuestas claras.",
+    "items": {
+      "what": {
+        "q": "¿Qué es BioSense?",
+        "a": "BioSense es un proyecto de medición de salud en desarrollo. La visión es una plataforma que une un concepto de biosensor subcutáneo, una interfaz vestible externa y una aplicación pensada para ayudar a entender señales clave del cuerpo."
+      },
+      "available": {
+        "q": "¿Está BioSense disponible hoy?",
+        "a": "No. BioSense no es un producto comercial. Está en etapa de prototipo e investigación y desarrollo."
+      },
+      "device": {
+        "q": "¿Es un dispositivo médico?",
+        "a": "No. BioSense no es un dispositivo médico aprobado, no tiene autorización de la FDA y no está pensado para diagnóstico, tratamiento ni uso clínico."
+      },
+      "measure": {
+        "q": "¿Qué pretende medir?",
+        "a": "El concepto actual se desarrolla en torno a varias señales, entre ellas glucosa, oxígeno tisular y temperatura. Son metas de desarrollo, no mediciones clínicas demostradas."
+      },
+      "far": {
+        "q": "¿En qué punto está el desarrollo?",
+        "a": "Hoy el trabajo incluye simulación, arquitectura, prototipos y la planificación temprana de la validación. Las afirmaciones futuras dependerán de pruebas y caminos regulatorios que aún no están hechos."
+      },
+      "join": {
+        "q": "¿Puedo unirme como apoyo o colaborador?",
+        "a": "Sí. Usa el acceso anticipado y dinos si eres persona, inversor, investigador, socio o colaborador. Leemos lo que podamos atender con sentido."
+      },
+      "lang": {
+        "q": "¿Estará en inglés y en español?",
+        "a": "Este sitio es bilingüe a propósito. Cualquier experiencia futura de producto pretende respetar las mismas lenguas."
+      },
+      "diagnosis": {
+        "q": "¿Sirve para diagnosticar o tratar?",
+        "a": "No. Nada de este sitio, ni del prototipo actual, está pensado para diagnosticar, tratar, curar o prevenir una enfermedad."
+      }
+    }
+  },
+  "footer": {
+    "mission": "Una plataforma de medición en desarrollo — para una relación más clara y humana con el cuerpo.",
+    "home": "Inicio",
+    "technology": "Tecnología",
+    "contact": "Contacto",
+    "privacy": "Privacidad",
+    "terms": "Términos",
+    "email": "hello@biosense.dev",
+    "copyright": "© {year} BioSense. Todos los derechos reservados.",
+    "disclaimer": "BioSense está en desarrollo y no es un dispositivo médico. No sirve para diagnóstico, tratamiento ni uso clínico. Nada en este sitio garantiza un rendimiento futuro ni una aprobación regulatoria."
+  },
+  "legal": {
+    "privacy": {
+      "title": "Política de privacidad",
+      "updated": "Última actualización: octubre de 2026",
+      "body": "Esta es una política provisional para un proyecto todavía en desarrollo.\n\nSi te unes al acceso anticipado, guardamos el nombre, el correo y el tipo de interés que envías, solo para responder a esa petición. No vendemos esta información. No la usamos como consejo médico.\n\nPuedes escribir a hello@biosense.dev para pedir que borremos tus datos.\n\nEsta página se sustituirá por una política completa antes de cualquier lanzamiento comercial."
+    },
+    "terms": {
+      "title": "Términos",
+      "updated": "Última actualización: octubre de 2026",
+      "body": "Este sitio describe un proyecto en investigación y desarrollo. No ofrece un dispositivo médico, un servicio clínico ni consejo de inversión.\n\nNada aquí debe leerse como promesa de disponibilidad, rendimiento, seguridad o autorización regulatoria.\n\nAl usar este sitio aceptas que BioSense, DNET y las partes relacionadas no responden de las decisiones que se tomen a partir de esta información.\n\nEstos términos son un placeholder y se sustituirán antes de cualquier oferta comercial."
+    }
+  }
+}

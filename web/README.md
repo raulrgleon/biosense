@@ -1,6 +1,8 @@
 # biosense.dev
 
-Sitio público de BioSense. El simulador en vivo está en [app.biosense.dev](https://app.biosense.dev).
+Sitio público de BioSense: qué es el proyecto, qué simula y qué no promete.
+El motor vive en [app.biosense.dev](https://app.biosense.dev) y el código en
+[raulrgleon/biosense-simulator](https://github.com/raulrgleon/biosense-simulator).
 
 Esto no es un dispositivo médico.
 

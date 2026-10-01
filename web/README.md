@@ -1,8 +1,17 @@
 # BioSense marketing site
 
-Premium bilingual landing page for BioSense (`biosense.dev`).
+Premium bilingual landing page for a health-technology project still in research and development.
 
-The product is in development. The site never claims medical approval, clinical accuracy, or commercial availability.
+BioSense is **not** a finished commercial medical device. This site must never claim FDA approval, clinical validation, diagnosis, treatment, or cure.
+
+## Stack
+
+- Next.js 16 (App Router)
+- React 19 + TypeScript
+- Tailwind CSS 4
+- next-intl (`/en`, `/es`)
+- Framer Motion
+- Lucide (available; used sparingly)
 
 ## Local
 
@@ -11,30 +20,71 @@ npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:3000 — it redirects to `/en` or `/es`.
+Open http://127.0.0.1:3000 — locale detection sends you to `/en` or `/es`.
 
-## Copy
+```bash
+npm run lint
+npx tsc --noEmit
+npm run build
+```
 
-Edit all visible text in:
+## Translations
+
+All visible copy lives in:
 
 - `messages/en.json`
 - `messages/es.json`
 
-Keep both files in sync.
+Keep the keys identical. Lists (signals, roadmap, FAQ, interests) are driven from `lib/content.ts`.
 
-## Concept images
+Language is URL-based (`/en`, `/es`) with browser detection and a cookie via next-intl.
 
-Replace the SVG placeholders inside `components/Showcase.tsx` and `components/Hero.tsx`.
-Add files to `public/concepts/` and point `<img>` or `next/image` at them.
-Keep a “Concept” label on any product visual.
+## Product images
 
-## Waitlist backend
+Place final renders in `public/images/biosense/`:
 
-`app/api/waitlist/route.ts` validates the form and logs the lead.
+- `implant-hero.webp`
+- `implant-exploded.webp`
+- `bioband.webp`
+- `ecosystem.webp`
+- `app-dashboard.webp`
 
-Connect it to a provider by replacing the `console.info` block with Resend, Loops, HubSpot, or a database insert.
+Until those files exist, `components/visuals/ConceptRenders.tsx` draws labeled engineering concepts. Never use stock medical photography.
+
+## Waitlist
+
+`POST /api/waitlist` validates first name, email, interest and consent.
+
+Hook a provider in `lib/waitlist.ts` → `submitWaitlist`.
+
+Supported integration path: Supabase, Resend, ConvertKit, Mailchimp, or a custom API.
+
+Do not write personal data to a local file.
+
+## Metadata
+
+Edit `meta` in the translation files and `generateMetadata` in `app/[locale]/layout.tsx`.
+
+Sitemap: `app/sitemap.ts`. Robots: `app/robots.ts`.
+
+## Analytics
+
+Disabled by default. See `lib/analytics.ts`. Do not add Google Analytics without a consent path.
+
+## Environment
+
+| Variable | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_ANALYTICS_ID` | Optional. Empty = no tracker. |
+
+No secrets belong on this marketing app.
 
 ## Deploy
 
-Coolify builds the repo `raulrgleon/biosense` with the root Dockerfile.
-The Next.js app lives in `web/`. **Ports Exposes: 3000.**
+Coolify builds `raulrgleon/biosense` with the root Dockerfile (`web/` app).
+
+**Ports Exposes: 3000.**
+
+## Disclaimer
+
+Concepts, specifications and capabilities on this website may change. BioSense is not currently an approved medical device and is not intended to diagnose, treat, cure or prevent disease.

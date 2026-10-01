@@ -8,13 +8,11 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
 
   return (
-    <div className="flex items-center gap-1 text-[13px] tracking-[0.08em] uppercase text-muted">
+    <div className="flex items-center gap-1 text-[12px] uppercase tracking-[0.14em] text-muted">
       <Link
         href={pathname}
         locale="en"
-        className={`rounded-full px-2 py-1 transition ${
-          locale === "en" ? "text-paper" : "hover:text-paper"
-        }`}
+        className={locale === "en" ? "text-paper" : "hover:text-paper"}
         aria-current={locale === "en" ? "page" : undefined}
       >
         EN
@@ -23,9 +21,7 @@ export function LanguageSwitcher() {
       <Link
         href={pathname}
         locale="es"
-        className={`rounded-full px-2 py-1 transition ${
-          locale === "es" ? "text-paper" : "hover:text-paper"
-        }`}
+        className={locale === "es" ? "text-paper" : "hover:text-paper"}
         aria-current={locale === "es" ? "page" : undefined}
       >
         ES

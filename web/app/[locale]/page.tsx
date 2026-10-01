@@ -1,14 +1,21 @@
 import { setRequestLocale } from "next-intl/server";
-import { Hero } from "@/components/Hero";
-import { Why } from "@/components/Why";
-import { Benefits } from "@/components/Benefits";
-import { Technology } from "@/components/Technology";
-import { Development } from "@/components/Development";
-import { Impact } from "@/components/Impact";
-import { Showcase } from "@/components/Showcase";
-import { Partners } from "@/components/Partners";
-import { EarlyAccess } from "@/components/EarlyAccess";
-import { FAQ } from "@/components/FAQ";
+import { Hero } from "@/components/home/Hero";
+import { BodyWindow } from "@/components/home/BodyWindow";
+import { SensorSignals } from "@/components/home/SensorSignals";
+import { Ecosystem } from "@/components/home/Ecosystem";
+import { WirelessPower } from "@/components/home/WirelessPower";
+import { Continuity } from "@/components/home/Continuity";
+import { SignalToInsight } from "@/components/home/SignalToInsight";
+import { Benefits } from "@/components/home/Benefits";
+import { Development } from "@/components/home/Development";
+import { Engineering } from "@/components/home/Engineering";
+import { PhysicalDesign } from "@/components/home/PhysicalDesign";
+import { ResponsibleDevelopment } from "@/components/home/ResponsibleDevelopment";
+import { HumanVision } from "@/components/home/HumanVision";
+import { Partners } from "@/components/home/Partners";
+import { Investors } from "@/components/home/Investors";
+import { Waitlist } from "@/components/home/Waitlist";
+import { FAQ } from "@/components/home/FAQ";
 
 type Props = { params: Promise<{ locale: string }> };
 
@@ -19,14 +26,21 @@ export default async function HomePage({ params }: Props) {
   return (
     <main>
       <Hero />
-      <Why />
+      <BodyWindow />
+      <SensorSignals />
+      <Ecosystem />
+      <WirelessPower />
+      <Continuity />
+      <SignalToInsight />
       <Benefits />
-      <Technology />
       <Development />
-      <Impact />
-      <Showcase />
+      <Engineering />
+      <PhysicalDesign />
+      <ResponsibleDevelopment />
+      <HumanVision />
       <Partners />
-      <EarlyAccess />
+      <Investors />
+      <Waitlist />
       <FAQ />
     </main>
   );

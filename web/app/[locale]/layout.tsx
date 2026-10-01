@@ -1,20 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import { notFound } from "next/navigation";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
 import "../globals.css";
 
-const geistSans = Geist({
+const geist = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -30,15 +25,24 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
+  const path = locale === "es" ? "/es" : "/en";
 
   return {
     metadataBase: new URL("https://biosense.dev"),
     title: t("title"),
     description: t("description"),
+    alternates: {
+      canonical: `https://biosense.dev${path}`,
+      languages: {
+        en: "https://biosense.dev/en",
+        es: "https://biosense.dev/es",
+        "x-default": "https://biosense.dev/en",
+      },
+    },
     openGraph: {
       title: t("ogTitle"),
       description: t("ogDescription"),
-      url: "https://biosense.dev",
+      url: `https://biosense.dev${path}`,
       siteName: "BioSense",
       type: "website",
       locale: locale === "es" ? "es_ES" : "en_US",
@@ -60,11 +64,8 @@ export default async function LocaleLayout({ children, params }: Props) {
   const messages = await getMessages();
 
   return (
-    <html
-      lang={locale}
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-ink text-paper">
+    <html lang={locale} className={`${geist.variable} h-full antialiased`}>
+      <body className="min-h-full bg-bg text-paper">
         <NextIntlClientProvider messages={messages}>
           <Header />
           {children}

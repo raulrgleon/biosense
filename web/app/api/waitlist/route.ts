@@ -1,32 +1,18 @@
 import { NextResponse } from "next/server";
-
-type Payload = {
-  name?: string;
-  email?: string;
-  role?: string;
-};
-
-const ROLES = new Set([
-  "consumer",
-  "investor",
-  "researcher",
-  "partner",
-  "collaborator",
-]);
+import { submitWaitlist, validateWaitlist } from "@/lib/waitlist";
 
 export async function POST(request: Request) {
-  const body = (await request.json().catch(() => ({}))) as Payload;
-  const name = String(body.name || "").trim();
-  const email = String(body.email || "").trim().toLowerCase();
-  const role = ROLES.has(String(body.role)) ? String(body.role) : "consumer";
+  const body = await request.json().catch(() => ({}));
+  const parsed = validateWaitlist(body);
 
-  if (!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    return NextResponse.json({ ok: false }, { status: 400 });
+  if ("error" in parsed) {
+    return NextResponse.json({ ok: false, error: parsed.error }, { status: 400 });
   }
 
-  // Hook your provider here (Resend, Loops, HubSpot, a database).
-  // This route only validates and acknowledges the lead.
-  console.info("[waitlist]", { name, email, role, at: new Date().toISOString() });
+  const result = await submitWaitlist(parsed);
+  if (!result.ok) {
+    return NextResponse.json(result, { status: 500 });
+  }
 
   return NextResponse.json({ ok: true });
 }

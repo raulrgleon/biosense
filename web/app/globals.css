@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
 :root {
-  --ink: #07080a;
-  --ink-2: #101216;
-  --paper: #f3efe6;
-  --muted: #9b968c;
-  --line: rgba(243, 239, 230, 0.1);
-  --accent: #7dcec4;
-  --accent-deep: #1d3d3a;
-  --warn: #c9a27a;
+  --bg: #050607;
+  --bg-2: #090a0c;
+  --bg-3: #0d0f12;
+  --paper: #f5f7f8;
+  --muted: #9ca3ad;
+  --line: rgba(245, 247, 248, 0.1);
+  --accent: #72e5f2;
+  --accent-mid: #47c7d9;
+  --accent-deep: #20aabd;
+  --warn: #c4b08a;
 }
 
 @theme inline {
-  --color-ink: var(--ink);
-  --color-ink-2: var(--ink-2);
+  --color-bg: var(--bg);
+  --color-bg-2: var(--bg-2);
+  --color-bg-3: var(--bg-3);
   --color-paper: var(--paper);
   --color-muted: var(--muted);
   --color-line: var(--line);
   --color-accent: var(--accent);
+  --color-accent-mid: var(--accent-mid);
   --color-accent-deep: var(--accent-deep);
   --color-warn: var(--warn);
   --font-sans: var(--font-geist-sans);
@@ -27,23 +31,31 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 5.5rem;
-  background: var(--ink);
+  background: var(--bg);
 }
 
 body {
-  background:
-    radial-gradient(900px 520px at 80% -10%, rgba(125, 206, 196, 0.08), transparent 50%),
-    var(--ink);
+  background: var(--bg);
   color: var(--paper);
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
 ::selection {
-  background: rgba(125, 206, 196, 0.28);
+  background: rgba(114, 229, 242, 0.22);
   color: var(--paper);
+}
+
+:focus-visible {
+  outline: 1px solid var(--accent);
+  outline-offset: 3px;
 }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

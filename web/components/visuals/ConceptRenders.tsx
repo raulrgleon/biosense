@@ -2,12 +2,8 @@
  * Decorative traces used behind editorial sections.
  * Product image slots live in ProductVisual.tsx:
  *   /public/images/biosense/biosense-hero.webp
- *   /public/images/biosense/biosense-implant.webp
- *   /public/images/biosense/biosense-exploded.webp
- *   /public/images/biosense/biosense-bioband.webp
+ *   /public/images/biosense/biosense-system.webp
  *   /public/images/biosense/biosense-under-skin.webp
- *   /public/images/biosense/biosense-ecosystem.webp
- *   /public/images/biosense/biosense-app.webp
  *   /public/images/biosense/lifestyle.webp
  */
 

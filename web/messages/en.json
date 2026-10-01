@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "BioSense — Next-Generation Biosensing Technology",
-    "description": "BioSense is developing a new multi-parameter biosensing platform exploring continuous glucose, tissue oxygen and temperature sensing.",
+    "description": "BioSense is developing a multi-parameter biosensing platform exploring glucose, tissue oxygen and temperature sensing.",
     "ogTitle": "BioSense — Next-Generation Biosensing Technology",
     "ogDescription": "A multi-parameter biosensing platform in research and development. Not a medical device.",
     "privacyTitle": "Privacy — BioSense",
@@ -12,9 +12,9 @@
     "why": "Why BioSense",
     "development": "Development",
     "vision": "Vision",
-    "partners": "Partners",
+    "follow": "Follow",
     "faq": "FAQ",
-    "cta": "Join the Journey",
+    "cta": "Get Updates",
     "updates": "Get Updates",
     "open": "Open menu",
     "close": "Close menu"
@@ -24,191 +24,120 @@
     "badge": "Currently in R&D",
     "line1": "Understand your body.",
     "line2": "Beyond the surface.",
-    "body": "Multi-parameter biosensing, being developed to explore a more continuous view of human biology.",
+    "body": "A multi-parameter biosensing platform in development, exploring a more continuous view of human biology.",
     "primary": "Explore BioSense",
     "seeSystem": "See how it works",
-    "secondary": "Follow Development",
+    "secondary": "Follow development",
     "scroll": "Scroll",
-    "disclaimer": "BioSense is an experimental technology platform in development. It is not currently a medical device and is not intended for diagnosis or treatment.",
-    "concept": "Engineering concept"
+    "disclaimer": "BioSense is experimental and in development. It is not currently an approved medical device and is not intended for diagnosis or treatment.",
+    "concept": "Concept visualization"
   },
-  "window": {
-    "title": "A new window into the body.",
-    "p1": "Most of what happens inside the human body remains invisible until we stop, test, measure or feel that something has changed.",
-    "p2": "BioSense is exploring a different future: one where important biological signals could be observed more continuously, creating a richer picture of how the body changes over time."
+  "overview": {
+    "eyebrow": "What is BioSense?",
+    "title": "A sensor. A band. Software that finds meaning.",
+    "body": "BioSense is developing a multi-parameter biosensing platform built around three connected elements: a small sensing module, an external BioBand wearable, and software designed to turn biological signals into understandable context.",
+    "sensor": {
+      "label": "BioSense Sensor",
+      "body": "A compact sensing module under development."
+    },
+    "band": {
+      "label": "BioBand",
+      "body": "An external wearable designed to communicate with the sensor and connect the system to the phone."
+    },
+    "app": {
+      "label": "App",
+      "body": "Software designed to turn signals into trends and context."
+    }
   },
   "signals": {
     "eyebrow": "Sensing concept",
     "title": "Three signals. One system.",
     "glucose": {
-      "title": "Glucose dynamics",
-      "body": "BioSense is exploring electrochemical glucose sensing designed to observe glucose-related changes in interstitial fluid."
+      "title": "Glucose",
+      "body": "BioSense is exploring continuous glucose-related sensing in interstitial fluid."
     },
     "oxygen": {
       "title": "Tissue oxygen",
-      "body": "An independent electrochemical sensing channel is being researched to study local tissue oxygen-related signals."
+      "body": "An experimental sensing channel is being researched to study local tissue oxygen-related signals."
     },
     "temperature": {
-      "title": "Local temperature",
-      "body": "A dedicated temperature channel is being developed to observe local thermal changes and support future multi-signal interpretation."
+      "title": "Temperature",
+      "body": "A local temperature channel is being developed to provide additional biological context."
     },
     "underDevelopment": "Under development",
     "notSpo2": "Experimental — not SpO₂.",
     "viz": "Concept visualization"
   },
-  "reveal": {
-    "line1": "Small outside.",
-    "line2": "Complex inside.",
-    "concept": "Concept visualization",
-    "shell": "Outer shell",
-    "coil": "Inductive coil",
-    "sensors": "Sensing area",
-    "electronics": "Electronics / AFE",
-    "glucose": "Glucose",
-    "oxygen": "Oxygen",
-    "temperature": "Temperature",
-    "band": "BioBand",
-    "field": "Wireless power and data"
+  "why": {
+    "title": "Your body is always changing.",
+    "body": "BioSense is being developed around the idea that trends and context may be more useful than isolated measurements.",
+    "meals": "Meals",
+    "sleep": "Sleep",
+    "movement": "Movement",
+    "stress": "Stress",
+    "recovery": "Recovery",
+    "environment": "Environment",
+    "patterns": {
+      "title": "Understand patterns",
+      "body": "See how the body moves through ordinary days — not just a single reading."
+    },
+    "change": {
+      "title": "See change over time",
+      "body": "Follow shifts across hours, days and weeks instead of isolated snapshots."
+    },
+    "context": {
+      "title": "Build personal context",
+      "body": "Connect signals to meals, rest, movement and recovery — the life around the numbers."
+    }
   },
-  "ecosystem": {
-    "title1": "One small sensor.",
-    "title2": "A larger ecosystem.",
+  "system": {
+    "title1": "How the system works.",
+    "title2": "Simple on the outside.",
     "sensor": {
-      "label": "Implant concept",
-      "body": "A small passive or near-passive subcutaneous sensing module designed around extremely low-power electronics."
+      "label": "Sensor",
+      "body": "A compact sensing module under development."
     },
     "band": {
       "label": "BioBand",
-      "body": "The external wearable is designed to power, communicate with and collect information from the sensor while connecting the system to the smartphone."
+      "body": "An external wearable designed to communicate with the sensor and connect the system to the phone."
     },
     "app": {
-      "label": "App",
-      "body": "Software is envisioned as the layer that turns raw signals into understandable trends and context."
+      "label": "Phone",
+      "body": "Software designed to turn signals into trends and context."
     },
     "insight": {
       "label": "Insight",
       "body": "The long-term aim is meaning — not a stream of unexplained numbers."
-    }
-  },
-  "wireless": {
-    "title": "No battery inside the sensor.",
-    "p1": "The current BioSense architecture explores wireless power transfer between BioBand and the subcutaneous module.",
-    "p2": "The goal is to keep the implanted electronics extremely small while moving the rechargeable battery, Bluetooth radio and larger power system into the wearable.",
-    "bandTitle": "BioBand",
-    "bandItems": "Battery · BLE · Storage · Reader coil",
-    "link": "Wireless power + data",
-    "sensorTitle": "BioSense sensor",
-    "sensorItems": "Sensor electronics · Electrochemical AFE · MCU · Small coil",
-    "sensorNone": "No rechargeable battery · No BLE",
-    "note": "Concept architecture. Final implementation may evolve during engineering development.",
-    "power": "Power",
-    "data": "Data"
-  },
-  "continuity": {
-    "title": "Health is not a snapshot.",
-    "p1": "The body changes every minute.",
-    "p2": "BioSense is being developed around the idea that understanding trends may be more useful than seeing isolated measurements.",
-    "meals": "Meals",
-    "movement": "Movement",
-    "sleep": "Sleep",
-    "stress": "Stress",
-    "recovery": "Recovery",
-    "environment": "Environment"
-  },
-  "insight": {
-    "title": "Data is only useful when it becomes understanding.",
-    "p1": "BioSense is not being designed simply to generate more numbers.",
-    "p2": "The long-term software vision is to combine multiple signals, history and context so that biological data becomes easier to understand.",
-    "signal": "Signal",
-    "context": "Context",
-    "pattern": "Pattern",
-    "insight": "Insight"
-  },
-  "benefits": {
-    "title": "What could continuous insight unlock?",
-    "disclaimer": "These represent research directions and long-term possibilities, not currently validated medical functions.",
-    "awareness": {
-      "title": "Body awareness",
-      "body": "See patterns that may otherwise remain invisible."
     },
-    "nutrition": {
-      "title": "Nutrition context",
-      "body": "Explore how biological signals change around meals."
-    },
-    "activity": {
-      "title": "Activity",
-      "body": "Observe how the body responds to movement and recovery."
-    },
-    "trends": {
-      "title": "Long-term trends",
-      "body": "Understand changes across days, weeks and months."
-    },
-    "personal": {
-      "title": "Personalization",
-      "body": "Build a picture centered on the individual rather than population averages alone."
-    },
-    "research": {
-      "title": "Research",
-      "body": "Create new opportunities to study relationships between biological signals."
-    }
+    "powerTitle": "Designed without a conventional rechargeable battery inside the sensing module.",
+    "powerBody": "BioSense is exploring wireless energy transfer from BioBand to help keep the sensing module compact.",
+    "note": "Concept architecture. Final implementation may evolve.",
+    "form": "Designed around a compact, low-profile form factor.",
+    "materials": "Materials and final dimensions remain under engineering evaluation.",
+    "underTitle": "Designed to sit quietly under the surface.",
+    "underBody": "A conceptual view of BioBand on the wrist and a small sensing module below the skin.",
+    "label": "Concept visualization"
   },
   "development": {
     "title": "Engineering before promises.",
-    "body": "BioSense is being developed step by step. Before making claims about what the technology can do, we are building models, simulations, electronics, sensing architectures and validation methods.",
-    "disclaimer": "BioSense is an experimental research and development project. Concepts, specifications, features, dimensions and capabilities shown on this website may change. BioSense is not currently an approved medical device and is not intended to diagnose, treat, cure or prevent disease.",
-    "s01": { "title": "Signal-chain simulation", "stage": "Stage 01" },
-    "s02": { "title": "Multi-sensor modeling", "stage": "Stage 02" },
-    "s03": { "title": "Electronics architecture", "stage": "Stage 03" },
-    "s04": { "title": "Wireless power and BioBand", "stage": "Stage 04" },
-    "s05": { "title": "Bench sensor validation", "stage": "Stage 05" },
-    "s06": { "title": "Physical prototypes", "stage": "Stage 06" },
-    "s07": { "title": "Biocompatibility / preclinical pathway", "stage": "Stage 07" },
-    "s08": { "title": "Clinical / regulatory pathway", "stage": "Stage 08" },
+    "body": "BioSense is being built step by step. We are developing the platform carefully before making claims about what it can do.",
+    "disclaimer": "BioSense is experimental. BioSense is in development. BioSense is not currently an approved medical device. It is not intended for diagnosis or treatment. Concepts shown on this website may change.",
+    "today": "Today",
+    "next": "Next",
+    "future": "Future",
+    "simulation": "Simulation & engineering",
+    "research": "Sensor research",
+    "wireless": "Wireless system development",
+    "bench": "Bench validation",
+    "prototypes": "Physical prototyping",
+    "preclinical": "Biocompatibility / preclinical development",
+    "clinical": "Clinical / regulatory pathways",
     "status": {
-      "activeValidated": "Validated",
       "active": "Active",
-      "development": "Active",
       "planned": "Planned",
       "future": "Future"
-    }
-  },
-  "engineering": {
-    "eyebrow": "Current engineering",
-    "title": "A serious architecture, still being evaluated.",
-    "lead": "The signal path under study is electrochemical sensing, analog front-end, conversion, low-power processing, inductive coupling, BioBand, then software.",
-    "aducm": "An ADuCM355-class electrochemical MCU/AFE is currently being evaluated. Architecture may change.",
-    "electrochemical": "Electrochemical sensing",
-    "afe": "Low-noise analog front-end",
-    "potentiostat": "Potentiostat",
-    "tia": "Transimpedance amplification",
-    "adc": "ADC",
-    "mcu": "Low-power MCU",
-    "inductive": "Inductive power",
-    "telemetry": "Wireless telemetry",
-    "bioband": "BioBand",
-    "software": "Mobile software"
-  },
-  "physical": {
-    "title": "Designed to disappear into everyday life.",
-    "body": "The design direction is small, smooth, rounded and low-profile. No sharp geometry. An RF-transparent outer structure. An external wearable aligned above it.",
-    "materials": "Materials and final dimensions remain under engineering evaluation.",
-    "target": "Early engineering target",
-    "dims": "15–25 mm length · 4–7 mm width · 2–4 mm thickness",
-    "change": "Dimensions are conceptual and may change substantially."
-  },
-  "underskin": {
-    "title": "Designed to sit quietly under the surface.",
-    "body": "A conceptual view of how a small sensing module could sit beneath the skin, aligned with BioBand above.",
-    "label": "Concept visualization"
-  },
-  "lifestyle": {
-    "line1": "Technology should fit into life.",
-    "line2": "Not take it over."
-  },
-  "responsible": {
-    "title": "Building carefully matters.",
-    "body": "Implantable sensing technology requires far more than electronics. Long-term stability, biological response, sterilization, materials and rigorous validation are central engineering challenges for BioSense.",
-    "items": "Biocompatibility · sensor stability · foreign-body response · biofouling · sterilization · drift · wireless power safety · validation · regulatory pathways"
+    },
+    "responsible": "Implantable biosensing requires rigorous work in materials, long-term stability, biological compatibility, validation and regulatory development."
   },
   "vision": {
     "title": "Technology should help people understand themselves.",
@@ -219,44 +148,36 @@
     "not3": "Not another screen full of meaningless numbers.",
     "yes1": "Better context.",
     "yes2": "Better understanding.",
-    "yes3": "Better questions."
+    "yes3": "Better questions.",
+    "life1": "Technology should fit into life.",
+    "life2": "Not take it over."
   },
-  "partners": {
-    "title": "BioSense is bigger than one discipline.",
-    "cta": "Work with BioSense",
-    "electrochemistry": "Electrochemistry",
-    "biomedical": "Biomedical engineering",
-    "embedded": "Embedded systems",
-    "rf": "RF engineering",
-    "materials": "Materials science",
-    "firmware": "Firmware",
-    "mobile": "Mobile software",
-    "data": "Data science",
-    "design": "Industrial design",
-    "researcher": "Researcher",
-    "engineer": "Engineer",
-    "university": "University",
-    "lab": "Laboratory",
-    "manufacturer": "Manufacturer",
-    "investor": "Investor",
-    "healthcare": "Healthcare innovation partner"
-  },
-  "investors": {
-    "title": "Interested in the future of biosensing?",
-    "body": "BioSense welcomes conversations with researchers, technology partners, manufacturers and strategic collaborators interested in advancing next-generation biosensing.",
-    "cta": "Contact BioSense"
+  "follow": {
+    "title1": "Follow BioSense.",
+    "title2": "Or help build it.",
+    "followTitle": "Follow BioSense",
+    "followBody": "For people who want updates as the platform takes shape — early supporters, media and anyone curious about the work.",
+    "followCta": "Get Updates",
+    "collabTitle": "Collaborate",
+    "collabBody": "For researchers, engineers, universities, laboratories, manufacturers and strategic collaborators.",
+    "collabCta": "Work with BioSense",
+    "researcher": "Researchers",
+    "engineer": "Engineers",
+    "university": "Universities",
+    "lab": "Laboratories",
+    "manufacturer": "Manufacturers",
+    "partner": "Technology partners"
   },
   "waitlist": {
-    "title": "Follow the journey.",
-    "body": "BioSense is still being built. Join the development list to receive major project updates, prototype milestones and future availability information.",
     "firstName": "First name",
     "email": "Email",
     "interest": "I’m interested as",
     "consent": "I understand BioSense is currently an experimental technology under development.",
-    "submit": "Keep Me Updated",
+    "submit": "Get Updates",
     "sending": "Sending…",
     "successTitle": "You’re on the list.",
     "successBody": "We’ll write when there is a real milestone to share.",
+    "notConfigured": "Updates are not open yet. Please check back soon.",
     "error": "Please complete the required fields and confirm the checkbox.",
     "fail": "Something went wrong. Try again.",
     "consumer": "Consumer",
@@ -271,7 +192,7 @@
     "title": "Questions.",
     "what": {
       "q": "What is BioSense?",
-      "a": "BioSense is a research and development project exploring a future multi-parameter biosensing platform combining a small subcutaneous sensing module, an external wearable and software."
+      "a": "BioSense is a research and development project exploring a future multi-parameter biosensing platform combining a small sensing module, an external wearable and software."
     },
     "available": {
       "q": "Is BioSense available today?",
@@ -279,23 +200,23 @@
     },
     "device": {
       "q": "Is BioSense a medical device?",
-      "a": "No. The current BioSense prototype and research platform is not an approved medical device and is not intended for diagnosis or treatment."
+      "a": "No. BioSense is not currently an approved medical device and is not intended for diagnosis or treatment."
     },
     "measure": {
       "q": "What is BioSense designed to measure?",
-      "a": "Current research focuses on glucose-related electrochemical signals, tissue oxygen-related electrochemical signals and local temperature."
+      "a": "Current research explores glucose-related sensing, an experimental tissue-oxygen channel and local temperature."
     },
     "battery": {
-      "q": "Does the implant contain a battery?",
-      "a": "The current architecture explores a passive or near-passive implant powered wirelessly by the external BioBand. Final architecture may evolve during development."
+      "q": "Does the sensing module contain a battery?",
+      "a": "The current concept is designed without a conventional rechargeable battery inside the sensing module. Final architecture may evolve during development."
     },
     "spo2": {
       "q": "Does BioSense measure blood oxygen or SpO₂?",
-      "a": "No. The current oxygen research channel is an experimental electrochemical tissue-sensing concept and should not be interpreted as pulse-oximeter SpO₂."
+      "a": "No. The current oxygen research channel is experimental and should not be interpreted as pulse-oximeter SpO₂."
     },
     "stage": {
       "q": "How far along is BioSense?",
-      "a": "BioSense is currently in engineering, simulation and early architecture development. Bench validation and physical prototypes remain part of the development roadmap."
+      "a": "BioSense is in research and engineering. Bench validation and physical prototypes are next. Clinical and regulatory work remains further ahead."
     },
     "collaborate": {
       "q": "Can researchers or companies collaborate?",
@@ -308,18 +229,18 @@
     "privacy": "Privacy",
     "terms": "Terms",
     "copyright": "© {year} BioSense.",
-    "disclaimer": "BioSense is an experimental research and development project. Concepts, specifications, features, dimensions and capabilities shown on this website may change. BioSense is not currently an approved medical device and is not intended to diagnose, treat, cure or prevent disease."
+    "disclaimer": "BioSense is experimental and in development. It is not currently an approved medical device and is not intended for diagnosis or treatment."
   },
   "legal": {
     "privacy": {
       "title": "Privacy",
       "updated": "Last updated: October 2026",
-      "body": "This is a placeholder policy for a waitlist website.\n\nIf you join the development list, we collect the first name, email, interest type and consent you submit, only to send project updates or reply to that request.\n\nWe do not sell this information. We do not use it for medical advice.\n\nIf analytics are enabled later, that will be disclosed here. By default, this site does not load third-party trackers.\n\nWrite to hello@biosense.dev to request deletion of your details.\n\n[PLACEHOLDER — replace before any commercial launch.]"
+      "body": "This page describes how BioSense handles information submitted through the public website.\n\nIf you join the update list, we collect the first name, email, interest type and consent you submit, only to send project updates or reply to that request.\n\nWe do not sell this information. We do not use it for medical advice.\n\nIf analytics are enabled later, that will be disclosed here. By default, this site does not load third-party trackers.\n\nWrite to hello@biosense.dev to request deletion of your details."
     },
     "terms": {
       "title": "Terms",
       "updated": "Last updated: October 2026",
-      "body": "This website is informational. BioSense is under development. Specifications may change.\n\nNothing here is medical advice. Nothing here is a medical-device claim. Nothing here is an offer of investment.\n\nIntellectual property on this site remains with BioSense and its related parties.\n\nThe content is provided as-is, without warranty.\n\n[TEMPORARY LEGAL TEMPLATE — replace with counsel-reviewed terms before any commercial offer.]"
+      "body": "This website is informational. BioSense is under development. Specifications may change.\n\nNothing here is medical advice. Nothing here is a medical-device claim. Nothing here is an offer of investment.\n\nIntellectual property on this site remains with BioSense and its related parties.\n\nThe content is provided as-is, without warranty."
     }
   }
 }

@@ -5,24 +5,27 @@ import { motion, useReducedMotion } from "framer-motion";
 
 /**
  * Product image slots — drop real files here later:
+ * Public homepage slots:
  * /public/images/biosense/biosense-hero.webp
- * /public/images/biosense/biosense-implant.webp
- * /public/images/biosense/biosense-exploded.webp
- * /public/images/biosense/biosense-bioband.webp
+ * /public/images/biosense/biosense-system.webp
  * /public/images/biosense/biosense-under-skin.webp
+ * /public/images/biosense/lifestyle.webp
+ *
+ * Additional slots (not used on the public homepage):
+ * /public/images/biosense/biosense-implant.webp
+ * /public/images/biosense/biosense-bioband.webp
  * /public/images/biosense/biosense-ecosystem.webp
  * /public/images/biosense/biosense-app.webp
- * /public/images/biosense/lifestyle.webp
  */
 export const PRODUCT_SLOTS = {
   hero: "/images/biosense/biosense-hero.webp",
-  implant: "/images/biosense/biosense-implant.webp",
-  exploded: "/images/biosense/biosense-exploded.webp",
-  bioband: "/images/biosense/biosense-bioband.webp",
+  system: "/images/biosense/biosense-system.webp",
   underSkin: "/images/biosense/biosense-under-skin.webp",
+  lifestyle: "/images/biosense/lifestyle.webp",
+  implant: "/images/biosense/biosense-implant.webp",
+  bioband: "/images/biosense/biosense-bioband.webp",
   ecosystem: "/images/biosense/biosense-ecosystem.webp",
   app: "/images/biosense/biosense-app.webp",
-  lifestyle: "/images/biosense/lifestyle.webp",
 } as const;
 
 export type ProductSlot = keyof typeof PRODUCT_SLOTS;
@@ -86,8 +89,8 @@ function Placeholder({ slot, concept }: { slot: ProductSlot; concept: string }) 
         {concept}
       </div>
       <svg viewBox="0 0 400 500" className="absolute inset-0 h-full w-full" aria-hidden>
-        {slot === "hero" || slot === "ecosystem" ? <HeroScene /> : null}
-        {slot === "implant" || slot === "exploded" ? <ImplantScene exploded={slot === "exploded"} /> : null}
+        {slot === "hero" || slot === "ecosystem" || slot === "system" ? <HeroScene /> : null}
+        {slot === "implant" ? <ImplantScene /> : null}
         {slot === "bioband" ? <BandScene /> : null}
         {slot === "underSkin" ? <SkinScene /> : null}
         {slot === "app" ? <AppScene /> : null}
@@ -114,14 +117,11 @@ function HeroScene() {
   );
 }
 
-function ImplantScene({ exploded }: { exploded: boolean }) {
-  const gap = exploded ? 28 : 0;
+function ImplantScene() {
   return (
     <g transform="translate(200 250)">
-      <rect x="-18" y={-70 - gap} width="36" height="36" rx="10" fill="#cfd8dc" />
-      <rect x="-16" y={-20} width="32" height="72" rx="10" fill="#d7e2e6" />
+      <rect x="-16" y={-36} width="32" height="72" rx="10" fill="#d7e2e6" />
       <circle r="7" fill="none" stroke="#3fc5d8" strokeWidth="2" />
-      <rect x="-14" y={62 + gap} width="28" height="18" rx="6" fill="#b7c6cc" />
     </g>
   );
 }

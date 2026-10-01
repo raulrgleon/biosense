@@ -3,7 +3,7 @@ export const NAV = [
   { href: "/#why", key: "why" },
   { href: "/#development", key: "development" },
   { href: "/#vision", key: "vision" },
-  { href: "/#partners", key: "partners" },
+  { href: "/#follow", key: "follow" },
   { href: "/#faq", key: "faq" },
 ] as const;
 
@@ -13,63 +13,34 @@ export const SIGNALS = [
   { id: "temperature", label: "underDevelopment" },
 ] as const;
 
-export const ECOSYSTEM_STEPS = ["sensor", "band", "app", "insight"] as const;
+export const OVERVIEW_STEPS = ["sensor", "band", "app"] as const;
 
-export const INSIGHT_STEPS = ["signal", "context", "pattern", "insight"] as const;
+export const SYSTEM_STEPS = ["sensor", "band", "app", "insight"] as const;
 
-export const BENEFITS = [
-  "awareness",
-  "nutrition",
-  "activity",
-  "trends",
-  "personal",
-  "research",
+export const WHY_WORDS = [
+  "meals",
+  "sleep",
+  "movement",
+  "stress",
+  "recovery",
+  "environment",
 ] as const;
 
-export const ROADMAP = [
-  { id: "s01", status: "activeValidated" },
-  { id: "s02", status: "active" },
-  { id: "s03", status: "active" },
-  { id: "s04", status: "development" },
-  { id: "s05", status: "planned" },
-  { id: "s06", status: "planned" },
-  { id: "s07", status: "future" },
-  { id: "s08", status: "future" },
+export const WHY_BENEFITS = ["patterns", "change", "context"] as const;
+
+export const ROADMAP_GROUPS = [
+  { id: "today", status: "active", items: ["simulation", "research", "wireless"] },
+  { id: "next", status: "planned", items: ["bench", "prototypes"] },
+  { id: "future", status: "future", items: ["preclinical", "clinical"] },
 ] as const;
 
-export const ENGINEERING_ITEMS = [
-  "electrochemical",
-  "afe",
-  "potentiostat",
-  "tia",
-  "adc",
-  "mcu",
-  "inductive",
-  "telemetry",
-  "bioband",
-  "software",
-] as const;
-
-export const DISCIPLINES = [
-  "electrochemistry",
-  "biomedical",
-  "embedded",
-  "rf",
-  "materials",
-  "firmware",
-  "mobile",
-  "data",
-  "design",
-] as const;
-
-export const AUDIENCES = [
+export const COLLABORATE_AUDIENCES = [
   "researcher",
   "engineer",
   "university",
   "lab",
   "manufacturer",
-  "investor",
-  "healthcare",
+  "partner",
 ] as const;
 
 export const INTERESTS = [
@@ -91,13 +62,4 @@ export const FAQ = [
   "spo2",
   "stage",
   "collaborate",
-] as const;
-
-export const CONTINUITY_WORDS = [
-  "meals",
-  "movement",
-  "sleep",
-  "stress",
-  "recovery",
-  "environment",
 ] as const;

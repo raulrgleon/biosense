@@ -6,10 +6,10 @@ import type { ReactNode } from "react";
 type Variant = "up" | "fade" | "scale" | "left";
 
 const variants: Record<Variant, { hidden: TargetAndTransition; show: TargetAndTransition }> = {
-  up: { hidden: { opacity: 0, y: 28 }, show: { opacity: 1, y: 0 } },
-  fade: { hidden: { opacity: 0 }, show: { opacity: 1 } },
-  scale: { hidden: { opacity: 0, scale: 0.97 }, show: { opacity: 1, scale: 1 } },
-  left: { hidden: { opacity: 0, x: -18 }, show: { opacity: 1, x: 0 } },
+  up: { hidden: { opacity: 0.01, y: 28 }, show: { opacity: 1, y: 0 } },
+  fade: { hidden: { opacity: 0.01 }, show: { opacity: 1 } },
+  scale: { hidden: { opacity: 0.01, scale: 0.97 }, show: { opacity: 1, scale: 1 } },
+  left: { hidden: { opacity: 0.01, x: -18 }, show: { opacity: 1, x: 0 } },
 };
 
 export function Reveal({

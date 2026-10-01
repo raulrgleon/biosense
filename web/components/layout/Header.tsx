@@ -41,7 +41,7 @@ export function Header() {
 
         <div className="ml-auto flex items-center gap-5 xl:ml-0">
           <LanguageSwitcher />
-          <Link href="/#waitlist" className="btn-primary hidden !px-4 !py-2 text-[13px] sm:inline-flex">
+          <Link href="/#follow" className="btn-primary hidden !px-4 !py-2 text-[13px] sm:inline-flex">
             {t("cta")}
           </Link>
           <button
@@ -72,7 +72,7 @@ export function Header() {
               {t(item.key)}
             </Link>
           ))}
-          <Link href="/#waitlist" className="pt-3 text-accent" onClick={() => setOpen(false)}>
+          <Link href="/#follow" className="pt-3 text-accent" onClick={() => setOpen(false)}>
             {t("cta")}
           </Link>
         </nav>

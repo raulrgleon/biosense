@@ -12,7 +12,7 @@ export function Hero() {
     reduce
       ? { initial: false as const, animate: { opacity: 1 } }
       : {
-          initial: { opacity: 0, y: 22 },
+          initial: { opacity: 0.01, y: 22 },
           animate: { opacity: 1, y: 0 },
           transition: { duration: 0.85, delay, ease: [0.22, 1, 0.36, 1] as const },
         };
@@ -39,20 +39,20 @@ export function Hero() {
             {t("body")}
           </motion.p>
           <motion.div {...fade(0.48)} className="mt-9 flex flex-wrap gap-3">
-            <Link href="/#why" className="btn-primary">
+            <Link href="/#overview" className="btn-primary">
               {t("primary")}
             </Link>
-            <Link href="/#ecosystem" className="btn-ghost">
+            <Link href="/#system" className="btn-ghost">
               {t("seeSystem")}
             </Link>
-            <Link href="/#development" className="btn-ghost">
+            <Link href="/#follow" className="btn-ghost">
               {t("secondary")}
             </Link>
           </motion.div>
         </div>
 
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 36 }}
+          initial={reduce ? false : { opacity: 0.01, y: 36 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.15, delay: 0.55, ease: [0.22, 1, 0.36, 1] }}
           className="relative"
@@ -65,7 +65,7 @@ export function Hero() {
       <div className="relative mx-auto flex max-w-[1400px] items-end justify-between gap-8 px-5 pb-10 md:px-8">
         <p className="max-w-2xl text-[13px] leading-relaxed text-warn">{t("disclaimer")}</p>
         <motion.a
-          href="#why"
+          href="#overview"
           className="hidden items-center gap-2 text-[11px] uppercase tracking-[0.18em] text-muted md:flex"
           animate={reduce ? undefined : { y: [0, 5, 0] }}
           transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}

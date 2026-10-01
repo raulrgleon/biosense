@@ -11,7 +11,8 @@ export async function POST(request: Request) {
 
   const result = await submitWaitlist(parsed);
   if (!result.ok) {
-    return NextResponse.json(result, { status: 500 });
+    const status = result.error === "waitlist_not_configured" ? 503 : 500;
+    return NextResponse.json(result, { status });
   }
 
   return NextResponse.json({ ok: true });

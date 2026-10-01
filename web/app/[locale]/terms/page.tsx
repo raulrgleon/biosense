@@ -9,6 +9,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t("termsTitle") };
 }
 
+// Temporary informational copy. Replace with counsel-reviewed terms before any commercial offer.
 export default async function TermsPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);

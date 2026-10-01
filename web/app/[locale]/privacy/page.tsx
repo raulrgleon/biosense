@@ -9,6 +9,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return { title: t("privacyTitle") };
 }
 
+// Temporary informational copy. Review with counsel before any commercial launch.
 export default async function PrivacyPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);

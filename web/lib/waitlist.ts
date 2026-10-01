@@ -37,16 +37,29 @@ export function validateWaitlist(input: Partial<WaitlistPayload>): WaitlistPaylo
 }
 
 /**
- * Production hook.
- * Replace `submitWaitlist` with Supabase, Resend, ConvertKit, Mailchimp, or a custom API.
- * Do not persist personal data to a local file.
+ * Configurable waitlist adapter.
+ *
+ * Production:
+ *   Set WAITLIST_PROVIDER to a real backend (resend | convertkit | mailchimp | supabase | custom)
+ *   and implement that case below. Do not persist personal data to a local file.
+ *
+ * Development / unconfigured:
+ *   Returns { ok: false, error: "waitlist_not_configured" } so the UI does not pretend
+ *   the signup was stored.
  */
 export async function submitWaitlist(payload: WaitlistPayload): Promise<WaitlistResult> {
-  console.info("[waitlist]", {
-    firstName: payload.firstName,
-    email: payload.email,
-    interest: payload.interest,
-    at: new Date().toISOString(),
-  });
-  return { ok: true };
+  const provider = process.env.WAITLIST_PROVIDER?.trim().toLowerCase();
+
+  if (!provider) {
+    return { ok: false, error: "waitlist_not_configured" };
+  }
+
+  switch (provider) {
+    // TODO: wire a production provider. Example:
+    // case "resend": return sendWithResend(payload);
+    // case "convertkit": return sendWithConvertKit(payload);
+    default:
+      void payload;
+      return { ok: false, error: "waitlist_not_configured" };
+  }
 }

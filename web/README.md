@@ -43,19 +43,20 @@ Language is URL-based (`/en`, `/es`) with browser detection and a cookie via nex
 
 Place final renders in `public/images/biosense/`:
 
-- `implant-hero.webp`
-- `implant-exploded.webp`
-- `bioband.webp`
-- `ecosystem.webp`
-- `app-dashboard.webp`
+- `biosense-hero.webp`
+- `biosense-system.webp`
+- `biosense-under-skin.webp`
+- `lifestyle.webp`
 
-Until those files exist, `components/visuals/ConceptRenders.tsx` draws labeled engineering concepts. Never use stock medical photography.
+Until those files exist, `ProductVisual` falls back to abstract concept placeholders. Never use stock medical photography.
 
 ## Waitlist
 
 `POST /api/waitlist` validates first name, email, interest and consent.
 
-Hook a provider in `lib/waitlist.ts` → `submitWaitlist`.
+If `WAITLIST_PROVIDER` is not configured, the API returns `{ ok: false, error: "waitlist_not_configured" }` and the UI does not pretend the signup was stored.
+
+Hook a provider in `lib/waitlist.ts` → `submitWaitlist`. Do not persist personal data to a local file.
 
 Supported integration path: Supabase, Resend, ConvertKit, Mailchimp, or a custom API.
 

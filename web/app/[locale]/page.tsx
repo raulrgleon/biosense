@@ -1,23 +1,12 @@
 import { setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/home/Hero";
-import { BodyWindow } from "@/components/home/BodyWindow";
+import { ProductOverview } from "@/components/home/ProductOverview";
 import { SensorSignals } from "@/components/home/SensorSignals";
-import { SensorReveal } from "@/components/home/SensorReveal";
-import { Ecosystem } from "@/components/home/Ecosystem";
-import { WirelessPower } from "@/components/home/WirelessPower";
-import { Continuity } from "@/components/home/Continuity";
-import { SignalToInsight } from "@/components/home/SignalToInsight";
-import { Benefits } from "@/components/home/Benefits";
+import { WhyItMatters } from "@/components/home/WhyItMatters";
+import { SystemOverview } from "@/components/home/SystemOverview";
 import { Development } from "@/components/home/Development";
-import { Engineering } from "@/components/home/Engineering";
-import { PhysicalDesign } from "@/components/home/PhysicalDesign";
-import { UnderSkin } from "@/components/home/UnderSkin";
-import { ResponsibleDevelopment } from "@/components/home/ResponsibleDevelopment";
 import { HumanVision } from "@/components/home/HumanVision";
-import { Lifestyle } from "@/components/home/Lifestyle";
-import { Partners } from "@/components/home/Partners";
-import { Investors } from "@/components/home/Investors";
-import { Waitlist } from "@/components/home/Waitlist";
+import { FollowAndCollaborate } from "@/components/home/FollowAndCollaborate";
 import { FAQ } from "@/components/home/FAQ";
 
 type Props = { params: Promise<{ locale: string }> };
@@ -29,24 +18,13 @@ export default async function HomePage({ params }: Props) {
   return (
     <main>
       <Hero />
-      <BodyWindow />
+      <ProductOverview />
       <SensorSignals />
-      <SensorReveal />
-      <Ecosystem />
-      <WirelessPower />
-      <Continuity />
-      <SignalToInsight />
-      <Benefits />
+      <WhyItMatters />
+      <SystemOverview />
       <Development />
-      <Engineering />
-      <PhysicalDesign />
-      <UnderSkin />
-      <ResponsibleDevelopment />
       <HumanVision />
-      <Lifestyle />
-      <Partners />
-      <Investors />
-      <Waitlist />
+      <FollowAndCollaborate />
       <FAQ />
     </main>
   );

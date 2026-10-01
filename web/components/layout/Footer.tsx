@@ -23,9 +23,9 @@ export function Footer() {
             <Link href="/#technology">{n("technology")}</Link>
             <Link href="/#development">{n("development")}</Link>
             <Link href="/#vision">{n("vision")}</Link>
-            <Link href="/#partners">{n("partners")}</Link>
+            <Link href="/#follow">{n("follow")}</Link>
             <Link href="/#faq">{n("faq")}</Link>
-            <Link href="/#waitlist">{t("contact")}</Link>
+            <Link href="/#follow">{t("contact")}</Link>
             <Link href="/privacy">{t("privacy")}</Link>
             <Link href="/terms">{t("terms")}</Link>
           </nav>

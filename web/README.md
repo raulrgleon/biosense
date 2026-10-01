@@ -1,6 +1,6 @@
 # biosense.dev
 
-Sitio público de BioSense. El simulador en vivo sigue en [tuhoy.com](https://tuhoy.com).
+Sitio público de BioSense. El simulador en vivo está en [app.biosense.dev](https://app.biosense.dev).
 
 Esto no es un dispositivo médico.
 

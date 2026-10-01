@@ -1,65 +1,63 @@
-# Publicar biosense.dev en el Dell (Coolify + Cloudflare + Tunnel)
+# Publicar BioSense en el Dell (Coolify + Cloudflare + Tunnel)
 
-Misma receta que tuhoy.com / dnet.llc. **App Coolify nueva.** No añadas `biosense.dev` al contenedor de `biosense-simulator`. El MCP y OAuth se quedan en `https://tuhoy.com/mcp`.
+Dos apps Coolify distintas. No mezclar dominios.
 
-## 1. Repositorio
+| Superficie | Dominio | Repo | App Coolify |
+| --- | --- | --- | --- |
+| Sitio público | `https://biosense.dev` | `raulrgleon/biosense` | App **nueva** (nginx, puerto 80) |
+| Calculador / API / MCP | `https://app.biosense.dev` | `raulrgleon/biosense-simulator` | App **existente** `biosense-simulator` |
 
-Sube esta carpeta a GitHub (repo nuevo, por ejemplo `raulrgleon/biosense-web`). Coolify construye desde el `Dockerfile`.
+El audience OAuth es `https://app.biosense.dev/mcp`. No pongas `BIOSENSE_API_KEY` en la app del sitio.
 
-## 2. Coolify (solo esta app)
+## 1. Sitio: Coolify
 
 1. http://192.168.1.100:8000 → proyecto DNET / production.
-2. **+ New** → Application → el repo de este sitio.
-3. Build pack: **Dockerfile**.
+2. **+ New** → Application → `https://github.com/raulrgleon/biosense`.
+3. Build pack: **Dockerfile** (raíz del repo; sirve `web/`).
 4. **Ports Exposes:** `80`.
 5. **Domains:** `https://biosense.dev` (y `https://www.biosense.dev` si lo quieres).
 6. Deploy. No toques Traefik, Tunnel ni las otras apps.
 
-Cuando el contenedor esté Running, Coolify/Traefik ya escuchan el hostname interno. Falta el DNS público.
+## 2. Calculador: Coolify (app existente)
 
-## 3. Cloudflare (dominio nuevo)
+En `biosense-simulator` (`lkpkgcorqlvtxf2lnu0wmwcg`):
 
-1. Cloudflare → **Add a site** → `biosense.dev`.
-2. Plan Free.
-3. Cloudflare te da dos nameservers. Ponlos en el registrador donde compraste el dominio (el panel de compra, no el de tuhoy.com).
-4. Espera a que el dominio aparezca **Active**.
+1. **Domains:** añade `https://app.biosense.dev`. Quita `tuhoy.com` cuando el subdominio responda.
+2. **AUTH0_AUDIENCE:** `https://app.biosense.dev/mcp` (también el Identifier de la API en Auth0).
+3. **BIOSENSE_ALLOWED_ORIGINS:** `https://app.biosense.dev,https://biosense.dev,https://www.biosense.dev`.
+4. Redeploy. No le añadas `biosense.dev` a esta app.
 
-## 4. DNS hacia el Tunnel (como tus otros sitios)
+## 3. Cloudflare DNS de `biosense.dev`
 
-No apuntes A a la IP pública del Dell.
-
-En Cloudflare DNS de `biosense.dev`, copia **el mismo CNAME de túnel** que usa `tuhoy.com` o `dnet.llc` (el destino `*.cfargotunnel.com`).
-
-Registros típicos (Proxy naranja ON):
+No apuntes A a la IP pública del Dell. Copia el mismo CNAME de túnel que usan los otros sitios DNET (`*.cfargotunnel.com`). Proxy naranja ON. SSL/TLS **Full (strict)**.
 
 | Tipo | Nombre | Destino |
 | --- | --- | --- |
-| CNAME | `@` | `<el mismo túnel que tuhoy.com>` |
+| CNAME | `@` | `<el mismo túnel que dnet.llc>` |
 | CNAME | `www` | `biosense.dev` |
+| CNAME | `app` | `<el mismo túnel que dnet.llc>` |
 
-SSL/TLS: **Full (strict)**, igual que el resto.
+## 4. Cloudflare Tunnel
 
-## 5. Cloudflare Tunnel (un hostname más)
+En el túnel que ya llega al Dell, public hostnames nuevos (mismo servicio local que las otras apps Coolify):
 
-En el túnel que ya llega al Dell:
+1. `biosense.dev`
+2. `www.biosense.dev` (si existe)
+3. `app.biosense.dev`
 
-1. **Public hostname** nuevo: `biosense.dev`.
-2. Servicio: el mismo destino local que usan las otras apps Coolify (normalmente el proxy Traefik de Coolify, `http://<coolify-proxy>:80`).
-3. Repite para `www.biosense.dev` si lo creaste.
+No cambies los hostnames de dnet.llc ni juntto.app. `tuhoy.com` se puede dejar hasta confirmar el corte.
 
-No cambies los hostnames de tuhoy.com, dnet.llc ni juntto.app.
-
-## 6. Comprobar
+## 5. Comprobar
 
 ```bash
 curl -I https://biosense.dev
-curl -I https://tuhoy.com/api/v1/health
+curl -I https://app.biosense.dev/api/v1/health
 ```
 
-Esperado: biosense.dev = 200 HTML. tuhoy health = 200. Sin 5xx.
+Esperado: biosense.dev = 200 HTML. app health = 200. Sin 5xx.
 
 ## No hacer
 
-- No mover el audience OAuth a biosense.dev.
-- No poner BIOSENSE_API_KEY en esta app.
-- No editar Cloudflare/DNS de tuhoy.com para “aprovechar” el dominio.
+- No poner `BIOSENSE_API_KEY` en la app del sitio.
+- No adjuntar `biosense.dev` al contenedor del simulador.
+- No editar Cloudflare/DNS de dnet.llc ni juntto.app.
